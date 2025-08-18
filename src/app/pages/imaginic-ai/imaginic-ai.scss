@@ -1,0 +1,220 @@
+aside {
+    position: fixed;
+    left: 0;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+
+    i {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        color: #000000;
+        background-color: #ffffff;
+        border-radius: 50%;
+        margin: 10px auto;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #555;
+            color: #ffffff;
+        }
+    }
+}
+
+.active {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+header {
+    position: fixed;
+    left: 7%;
+    width: 70px;
+    width: 100%;
+    height: 80px;
+    top: 0 !important;
+    display: flex;
+    right: 0;
+
+    img {
+        height: 50px;
+    }
+
+    h6 {
+        margin: 0;
+        font-weight: 400;
+    }
+}
+
+main {
+    display: flex;
+    background-image: url('https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGluZWFyJTIwZ3JhZGllbnR8ZW58MHx8MHx8fDA%3D');
+    background-size: cover;
+}
+
+.ai-container {
+    width: calc(100% - 70px);
+    min-height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    margin-left: 70px;
+    justify-content: center;
+    background-image: url('https://ex-coders.com/html/xiomi/assets/img/breadcrumb/bg.jpg');
+    background-size: 100% 100%;
+    border-radius: 25px 0 0 25px;
+    padding: 50px 60px;
+    padding-top: 100px !important;
+
+    .container {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    border-radius: 15px;
+
+    i {
+        font-size: 30px;
+    }
+}
+
+.card-container:nth-child(1) i {
+    color: #ff0000;
+}
+
+.card-container:nth-child(2) i {
+    color: #0e7034;
+}
+
+.card-container:nth-child(3) i {
+    color: rgb(12, 102, 150);
+}
+
+footer {
+    transition: .2s ease-in-out;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 50px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 25px;
+    overflow: hidden;
+
+    input {
+        width: calc(100% - 120px);
+        height: 100%;
+        border: none;
+        outline: none;
+        padding: 0 25px;
+    }
+
+
+    i {
+        height: 40px;
+        width: 40px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 25px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    .send-icon {
+        background-color: #007a3f !important;
+    }
+
+    .voice-icon {
+        background-color: #d7d7d7 !important;
+        color: #000000;
+        font-size: 20px;
+    }
+}
+
+footer.footer-expanded {
+    width: 50%;
+    transition: .2s ease-in-out;
+}
+
+/* voice-to-text.component.css */
+.voice-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.waveform {
+    height: 100px;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.transcript-text {
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.mic-button {
+    font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.stop-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+}

@@ -1,0 +1,193 @@
+.form-container {
+  .input-container {
+    position: relative !important;
+    height: 50px !important;
+    margin-bottom: 15px !important;
+
+    .password-type {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+  }
+
+  /* Input field styling */
+  .input-container input,
+  textarea {
+    width: 100% !important;
+    font-size: 16px !important;
+    border: 1px solid #bdbdbd !important;
+    border-radius: 8px !important;
+    outline: none !important;
+    height: 100% !important;
+    color: #000000 !important;
+    padding: 0 15px !important;
+    background-color: transparent !important;
+    transition: border-color 0.3s ease !important;
+
+
+  }
+
+  .search-container {
+    height: 50px !important;
+
+    input {
+      width: 100% !important;
+      font-size: 16px;
+      border: 1px solid #f1f1f1 !important;
+      outline: none !important;
+      height: 100% !important;
+      color: #000000 !important;
+      padding: 0 15px !important;
+      background-color: transparent !important;
+      transition: border-color 0.3s ease !important;
+      font-weight: 400 !important;
+      border-radius: 25px !important;
+    }
+
+    textarea {
+      width: 100% !important;
+      font-size: 16px !important;
+      border: 1px solid #f1f1f1 !important;
+      outline: none !important;
+      height: 100% !important;
+      color: #000000 !important;
+      padding: 0 15px !important;
+      background-color: transparent !important;
+      transition: border-color 0.3s ease !important;
+      font-weight: 400 !important;
+      border-radius: 25px !important;
+    }
+
+    ::placeholder {
+      color: #000000 !important;
+      opacity: 1 !important;
+      /* Firefox */
+    }
+
+    ::-ms-input-placeholder {
+      /* Edge 12-18 */
+      color: #000000 !important;
+    }
+
+  }
+
+  .input-container p-dropdown .p-dropdown {
+    width: 100% !important;
+    font-size: 16px !important;
+    border: 1px solid #bdbdbd !important;
+    border-radius: 8px !important;
+    outline: none !important;
+    height: 100% !important;
+    color: #000000 !important;
+    padding: 0 15px !important;
+    background-color: transparent !important;
+    transition: border-color 0.3s ease !important;
+  }
+
+  .input-container p-multiselect .p-multiselect {
+    width: 100% !important;
+    font-size: 16px !important;
+    border: 1px solid #bdbdbd !important;
+    border-radius: 8px !important;
+    outline: none !important;
+    height: 100% !important;
+    color: #000000 !important;
+    padding: 0 15px !important;
+    background-color: transparent !important;
+    transition: border-color 0.3s ease !important;
+  }
+
+  .input-container p-dropdown .p-dropdown:hover,
+  .input-container p-dropdown .p-dropdown:focus {
+    border-color: #217a46 !important;
+    /* Change border color on hover or focus */
+  }
+
+  ::placeholder {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    /* Firefox */
+  }
+
+  ::-ms-input-placeholder {
+    /* Edge 12-18 */
+    color: #ffffff !important;
+  }
+
+  /* Label styling */
+  .input-container label {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: 10px !important;
+    color: #707a94 !important;
+    font-size: 16px !important;
+    transition: 0.3s ease !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+  }
+
+
+
+  /* Input focus state */
+  .input-container input:focus,
+  textarea:focus {
+    outline: 1px solid #217a46 !important;
+
+  }
+
+  .input-container input:focus+label,
+  .input-container input:valid+label,
+  .input-container textarea:focus+label,
+  .input-container textarea:valid+label {
+    top: -1px !important;
+    left: 10px !important;
+    font-size: 12px !important;
+    color: #217a46 !important;
+    background: #ffffff !important;
+    padding: 0 10px !important;
+  }
+
+
+  // .input-container input:focus+.password-type,
+  // .input-container input:valid+.password-type {
+  //   display: block !important;
+  // }
+
+
+  .inline-icons {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+
+    i {
+      height: 40px !important;
+      width: 40px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 25px !important;
+      cursor: pointer !important;
+    }
+
+    i:hover {
+      color: #ffffff !important;
+    }
+  }
+}
+
+
+// form-caption 
+.form-caption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  h2 {
+    margin: 0;
+  }
+}

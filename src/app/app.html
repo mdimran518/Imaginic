@@ -1,0 +1,27 @@
+<app-header *ngIf="isShowHeaderAndFooter"></app-header>
+<router-outlet></router-outlet>
+<app-footer *ngIf="isShowHeaderAndFooter" ></app-footer>
+
+<div class="social-media" *ngIf="isShowHeaderAndFooter">
+
+  <ng-container *ngIf="isShowSocialMedia">
+    <i class="bi bi-facebook"></i>
+    <i class="bi bi-whatsapp"></i>
+    <i class="bi bi-instagram"></i>
+    <i class="bi bi-linkedin"></i>
+    <i class="bi bi-reddit"></i>
+  </ng-container>
+  <!-- <div>
+    <i (click)="handleMenuClick()" class="bi bi-list "></i>
+  </div> -->
+
+</div>
+
+
+<!-- <div class="chat-with-us" [class.icon-only]="isScrollingUp" *ngIf="isShowHeaderAndFooter">
+  <button (click)="openChatWithUs()">
+    <i class="bi bi-chat-dots"></i>
+    <span [@fadeInOut]="!isScrollingUp ? 'visible' : 'hidden'">Chat with us</span>
+  </button>
+</div>
+ -->

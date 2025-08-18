@@ -1,0 +1,273 @@
+<main class="" style="background-color: #ffffff;">
+
+
+    <section class="comman-pt hero-section " id="heroSection">
+        <section>
+            <div class="marquee-container">
+                <div class="marquee">
+                    <span *ngFor="let word of keywords">{{ word }} &nbsp;*&nbsp; </span>
+                    <!-- Repeat again for infinite effect -->
+                    <span *ngFor="let word of keywords">{{ word }} &nbsp;*&nbsp; </span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container pt-5">
+
+            <div class="hero-con">
+                <span gsap="fade-down" class="expertise"> Full Stack Developer</span>
+
+
+                <h1 gsap="split-text" [duration]="0.6" [stagger]="0.03"> Transforming <b
+                        style="color: red !important;">Ideas</b> into Exceptional Digital
+                    Products </h1>
+                <p gsap="split-text" [duration]="0.2" [stagger]="0.009">
+                    With a foundation in full-stack development and expertise in Angular, Java, and MongoDB, I
+                    specialize in crafting seamless digital experiences. My journey
+                    spans from building dynamic UI/UX designs to creating
+                    scalable backend solutions with Spring Boot. Passionate about innovation and continuous
+                    learning,
+                    I aim
+                    to deliver exceptional digital products that not only meet technical requirements but also
+                    captivate
+                    users.
+                </p>
+
+                <div gsap="fade-down">
+                    <div style="display: flex;align-items: center;justify-content: center;">
+                        <h5 (click)="downloadPDF()" style="cursor: pointer;"><i
+                                class="bi bi-download"></i>&nbsp;&nbsp;4+ years of experience</h5>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center gap-3 mt-5">
+                        <button (click)="sendEmail()" class="btn px-5">HIRE ME</button>
+                        <button (click)="routeTo('contactus')" class="border-btn px-5">CONTACT US</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5 services background-grid" style="overflow-x: hidden;">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-sm-6" gsap="fade-left">
+                    <div>
+                        <div class="d-flex align-items-center gap-3" style="color: #007a3f;">
+                            <i class="bi bi-stars " style="font-size: 25px;"></i>
+                            <h3 class="m-0">Services</h3>
+                        </div>
+                        <h1 class="mt-4">Exceptional Full Stack Development</h1>
+                        <p>
+                            Delivering end-to-end full stack solutions with expertise in Angular, Java Spring Boot, and
+                            MongoDB.
+                            From crafting seamless front-end interfaces to building scalable backend services,
+                            I specialize in creating secure, high-performing, and user-focused applications
+                            that drive business success and enhance digital experiences.
+                        </p>
+                        <button (click)="sendEmail()" class="btn px-5">HIRE ME</button>
+                    </div>
+                </div>
+                <div class="col-sm-6 " gsap="fade-right">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3" *ngFor="let faq of services; let i = index">
+                            <h2 class="accordion-header" [id]="'heading' + i">
+                                <button class="accordion-button" [class.collapsed]="i !== 0" type="button"
+                                    data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i"
+                                    [attr.aria-expanded]="i === 0 ? 'true' : 'false'"
+                                    [attr.aria-controls]="'collapse' + i">
+                                    {{ i + 1 }}. {{ faq.question }}
+                                </button>
+                            </h2>
+                            <div [id]="'collapse' + i" class="accordion-collapse collapse" [class.show]="i === 0"
+                                [attr.aria-labelledby]="'heading' + i" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    {{ faq.answer }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="experience-section py-5" #counterSection>
+        <div class="container ">
+            <div class="experience-left">
+                <h1 gsap="split-text"><span class="big-number">4+</span> Years Of Experience</h1>
+                <p gsap="split-text" [duration]="0.2" [stagger]="0.009">
+                    Over the years, I have built and delivered end-to-end applications that connect ideas to real-world
+                    solutions.
+                    From designing intuitive and responsive frontends to developing powerful backend architectures, I
+                    focus on writing clean, maintainable code.
+                    I work with modern databases to ensure scalability and efficiency, while also keeping security at
+                    the core of every project.
+                    My goal is always to create reliable systems that not only meet client needs but also stand the test
+                    of time.
+                    With each project, I aim to learn, grow, and push the boundaries of what technology can achieve.
+                </p>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section class="pt-5 pb-5 recent-work" id="recentWork">
+        <div class="container mt-5">
+            <span gsap="fade-left" class="label"><img
+                    src="https://wordpress.validthemes.net/ambrox/wp-content/plugins/ambrox-core/assets/img/10.png"
+                    alt=""> Recent Work</span>
+            <div class="d-flex align-items-center justify-content-between w-100 pr-5">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>Look at my portfolio and
+                            give me your feedback</h2>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-5 project-content">
+                <div class="col-sm-12 mb-4">
+                    <div>
+                        <img src="https://cdn.dribbble.com/userupload/43687887/file/original-c6c429584a631e14830ce8e14d8fb86e.png?resize=1504x1128&vertical=center"
+                            alt="" style="height: 400px;object-fit: cover;border-radius: 15px;">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about-us pt-5 pb-5" id="aboutUs">
+        <div class="container ">
+            <div class="row">
+                <div class="col-sm-6 mb-5">
+                    <h1 class="title">A Complete Overview of My Skills, Talents, and Capabilities</h1>
+                    <div class="d-flex align-items-center gap-3 mt-5">
+                        <button (click)="sendEmail()" class="btn "> Hire Me</button>
+                        <button (click)="openWhatsApp()" class="transparent-btn "> What's app</button>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="exp-data">
+                                <span>01</span>
+                                <h1>Angular Developer</h1>
+                                <h6>Front-End Expert</h6>
+                                <p>Proficient in building dynamic, responsive web applications using Angular,
+                                    TypeScript,
+                                    and
+                                    related technologies.</p>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="exp-data">
+                                <span>02</span>
+                                <h1>Java Developer</h1>
+                                <h6>Back-End Specialist</h6>
+                                <p>Experienced in developing robust APIs and services using Spring Boot and Java
+                                    frameworks.
+                                </p>
+                            </div>
+
+
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="exp-data">
+                                <span>03</span>
+                                <h1>UI/UX Designer</h1>
+                                <h6>Creative Interface Designer</h6>
+                                <p>Skilled in creating intuitive and aesthetically pleasing user interfaces with HTML,
+                                    CSS,
+                                    Bootstrap, and Tailwind.</p>
+                            </div>
+                            <div class="exp-data">
+                                <span>04</span>
+                                <h1>MongoDB Expert</h1>
+                                <h6>Database Management</h6>
+                                <p>Experienced in managing and optimizing NoSQL databases for scalable and efficient
+                                    data
+                                    handling.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="pt-5 pb-5" id="faq">
+        <div class="container pt-5 pb-5">
+            <div class="faq">
+                <h2 class="text-center mb-4" style="font-weight: 400;">Frequently Asked Questions</h2>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What is Majestic UI?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Majestic UI</strong> is a collection of beautifully designed user interfaces
+                                shared
+                                for inspiration and implementation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Can I use the designs in my project?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Yes, you can use these UI designs in personal and commercial projects with proper credit
+                                to
+                                the designer.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How do I contribute my own UI design?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Send your designs via DM or tag <code>majesticui</code> on Instagram. Selected designs
+                                will
+                                be featured with full credit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <hr />
+
+
+
+
+</main>

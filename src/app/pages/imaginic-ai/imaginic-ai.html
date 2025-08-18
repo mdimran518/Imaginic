@@ -1,0 +1,57 @@
+<main>
+    <aside>
+        <i class="bi bi-plus active"></i>
+        <i class="bi bi-search"></i>
+        <i class="bi bi-compass"></i>
+        <i class="bi bi-grid"></i>
+        <i class="bi bi-clock"></i>
+    </aside>
+
+    <header>
+        <div class="d-flex align-items-center gap-2">
+            <img src="mediafiles/images/logo/logo.svg" alt="">
+            <h6>Imaginic AI</h6>
+        </div>
+    </header>
+
+    <section class="ai-container">
+        <div class="container">
+            <h1>Hello , Md Imran Nazeer <br />Ready to achive great thing?</h1>
+            <div class="row  mt-5   ">
+                <div class="col-sm-3 card-container" *ngFor="let prompt of predefinedPrompts">
+                    <div class="card">
+                        <i class="bi {{prompt.icons}}"></i>
+                        <h6 class="mt-3">{{prompt.prompt}}</h6>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <h5>{{answer }}</h5>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer [ngClass]="{ 'footer-expanded': isInputFocused }" class="footer-base">
+    <div class="d-flex align-items-center justify-content-between w-100">
+        <input [(ngModel)]="question" placeholder="Ask something..." type="search"
+            placeholder="Search for prompts..." />
+        <div class="d-flex align-items-center gap-1">
+            <i (click)="openModal()" class="bi bi-mic voice-icon"></i>
+            <i (click)="sendQuestionWithLoading()" class="bi bi-arrow-up-short send-icon"></i>
+        </div>
+    </div>
+</footer>
+
+<div class="voice-modal" *ngIf="isModalVisible">
+    <div class="modal-content">
+        <div class="waveform">
+            <canvas #waveCanvas></canvas>
+        </div>
+
+        <p class="transcript-text">{{ text || 'Listening...' }}</p>
+
+        <button (click)="stopListening()" class="stop-button">✖</button>
+    </div>
+</div>

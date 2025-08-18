@@ -1,0 +1,36 @@
+<main class="">
+
+    <div class="page-title ">
+        <div>
+            <h1>Services</h1>
+        </div>
+        <img src="https://ex-coders.com/html/xiomi/assets/img/shape/star.png" alt="">
+    </div>
+    <section>
+        <div class="marquee-container">
+            <div class="marquee">
+                <span *ngFor="let word of keywords">{{ word }} &nbsp;*&nbsp; </span>
+                <!-- Repeat again for infinite effect -->
+                <span *ngFor="let word of keywords">{{ word }} &nbsp;*&nbsp; </span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mt-5">
+        <span> What I do </span>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="main-title">Crafting Seamless  Full-Stack Solutions</h1>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-3 mb-4" *ngFor="let service of services">
+                <div class="card">
+                    <i class="service-icon bi" [ngClass]="service.icon"></i>
+                    <h5 class="mt-3">{{ service.title }}</h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

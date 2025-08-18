@@ -1,0 +1,132 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('./input.scss');
+/* Bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import "bootstrap/dist/css/bootstrap.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+
+
+:root {
+    --primary-color: #007a3f;
+    --default-bg: #ffffff;
+    --default-btn-bg: #007a3f;
+    --default-btn-border: #007a3f;
+}
+
+
+
+.comman-pt {
+    padding-top: 70px !important;
+}
+
+.btn {
+    width: auto !important;
+    padding: 10px 30px 12px 30px !important;
+    background-color: var(--default-btn-bg) !important;
+    border: 1px solid var(--default-btn-border) !important;
+    color: #ffffff !important;
+    border-radius: 25px !important;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    border: 1px solid var(--default-btn-border) !important;
+    background-color: transparent !important;
+    color: #007a3f !important;
+}
+
+.border-btn {
+    width: auto;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 1px solid var(--default-btn-border);
+    color: #007a3f;
+    white-space: nowrap;
+    border-radius: 25px;
+}
+
+.border-btn:hover {
+    background-color: var(--default-btn-bg) !important;
+    border: 1px solid var(--default-btn-border) !important;
+    color: #ffffff !important;
+}
+
+
+.transparent-btn {
+    background-color: transparent;
+    border: none;
+    color: #007a3f;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.page-title {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://ex-coders.com/html/xiomi/assets/img/breadcrumb/bg.jpg');
+    background-size: 100% 100%;
+
+    h1 {
+        font-size: 70px;
+    }
+
+    img {
+        position: absolute;
+        right: 30%;
+        top: 150px;
+        animation: moveRight 2s linear 0s infinite alternate both;
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+
+// swiper-container .swiper-slide-active {
+//     transform: scale(1.1);
+//     transition: transform 0.3s ease;
+//     z-index: 2;
+// }
+
+.main-title {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+b {
+    color: #007a3f !important;
+}
+
+
+
+.background-grid {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+.two-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2; /* standard property for compatibility */
+    /* limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,89 @@
+header {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    z-index: 1000;
+    overflow-x: hidden;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            height: 70px;
+            width: auto;
+        }
+
+        ul {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin: 0;
+
+            li {
+                list-style: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}
+
+#navigation.active {
+    transition: .5s ease-in-out;
+    background-color: #fff !important;
+    backdrop-filter: blur(10px);
+    // padding: 10px !important;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+header.hide {
+    top: -100px;
+    /* Adjust the value to hide the header completely */
+}
+
+.active-link {
+    color: #007a3f;
+    font-weight: 700;
+}
+
+
+.menu-icon {
+    display: none;
+}
+
+@media(max-width:768px) {
+    .nav-menu {
+        display: none !important;
+    }
+
+    .menu-icon {
+        display: flex;
+        font-size: 25px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+.offcanvas-start {
+    width: 300px;
+}
+
+.sidebar-data {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    li{
+        padding: 10px 0;
+    }
+}

@@ -1,0 +1,70 @@
+<main class="">
+
+    <div class="page-title ">
+        <div>
+            <h1>About us</h1>
+        </div>
+        <img src="https://ex-coders.com/html/xiomi/assets/img/shape/star.png" alt="">
+    </div>
+    <section class="pt-5 pb-5">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-12">
+                    <span>About me</span>
+                    <h2 class="mt-4 main-title">My Story And Expertise</h2>
+                    <div class="customer-review mt-5">
+                        <swiper-container class="customer-review-content" direction="horizontal" navigation="false"
+                            pagination="true" loop="true" autoplay-delay="2000" speed="600" [breakpoints]="{
+      '320': { 'slidesPerView': 1 },
+      '768': { 'slidesPerView': 2 },
+      '1024': { 'slidesPerView': 3 }
+    }">
+
+                            <swiper-slide *ngFor="let item of testimonials; let i = index">
+                                <div class="p-4 bg-white rounded text-center">
+                                    <div class="indexing">{{ i + 1 }}</div>
+                                    <p class="text-gray-600 italic mb-2">"{{ item.review }}"</p>
+                                    <div class="text-yellow-500 mb-2">
+                                        <ng-container *ngFor="let star of [].constructor(item.rating)">
+                                            ★
+                                        </ng-container>
+                                    </div>
+                                    <h4 class="font-semibold text-gray-800">{{ item.name }}</h4>
+                                </div>
+                            </swiper-slide>
+                        </swiper-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="premium-tools pt-5 pb-5" style="overflow-x: hidden;">
+        <div class="container">
+            <span style="color: #767676;">We use</span>
+            <h1>PREMIUM <br /><span class="h-span">TOOLS</span></h1>
+            <div class="row mt-5">
+                <div class="col-sm-4 mb-3" *ngFor="let item of premiumTools">
+                    <div class="premium-tools-content">
+                        <div class="icon-image">
+                            <img [src]="item.iconImage" alt="">
+                        </div>
+                        <div class="premium-tools-text">
+                            <h5>{{ item.name }}</h5>
+                            <p>{{ item.description }}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <img src="https://blog.n8n.io/content/images/size/w1200/2025/02/11-ai-tools-coding--1-.png" alt=""
+            style="width: 100%;"> -->
+    </section>
+
+
+
+
+</main>

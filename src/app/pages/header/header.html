@@ -1,0 +1,33 @@
+<header #header id="navigation" class="header transparent-background" [ngClass]="{'hide': isScrolledDown}">
+    <div class="container">
+        <img src="mediafiles/images/logo/logo.svg" alt="">
+        <ul class="nav-menu">
+            <li routerLink="home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</li>
+            <li routerLink="about" routerLinkActive="active-link">About</li>
+            <li routerLink="services" routerLinkActive="active-link">Services</li>
+            <li routerLink="blog" routerLinkActive="active-link">Blog</li>
+            <li routerLink="contactus" routerLinkActive="active-link">Contact Us</li>
+        </ul>
+        <div class="menu-icon">
+            <i class="bi bi-ui-radios-grid" (click)="openSidebar('sidebarOffcanvas')"></i>
+        </div>
+    </div>
+</header>
+
+
+<div class="offcanvas offcanvas-start " tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvaslabel">
+    <div class="offcanvas-header">
+        <img src="mediafiles/images/logo/logo.svg" alt="" style="height: 90px;">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="sidebar-data">
+            <li routerLink="home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
+                (click)="closeSidebar()">Home</li>
+            <li (click)="closeSidebar()" routerLink="about" routerLinkActive="active-link">About</li>
+            <li (click)="closeSidebar()" routerLink="services" routerLinkActive="active-link">Services</li>
+            <li (click)="closeSidebar()" routerLink="blog" routerLinkActive="active-link">Blog</li>
+            <li (click)="closeSidebar()" routerLink="contactus" routerLinkActive="active-link">Contact Us</li>
+        </ul>
+    </div>
+</div>
